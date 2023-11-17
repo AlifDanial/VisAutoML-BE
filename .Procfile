@@ -1,1 +1,1 @@
-web: gunicorn VisAutoML.wsgi:application
+web: gunicorn VisAutoML.wsgi
