@@ -1,1 +1,1 @@
-# VisAutoML-BE
+# VisAutoML - Django
