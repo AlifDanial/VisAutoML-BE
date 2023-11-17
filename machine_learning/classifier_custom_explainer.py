@@ -8,7 +8,7 @@ from sklearn.ensemble import RandomForestClassifier, BaggingClassifier, ExtraTre
     
 from sklearn.tree import DecisionTreeClassifier
 from lightgbm import LGBMClassifier
-from xgboost import XGBClassifier
+# from xgboost import XGBClassifier
 from sklearn.linear_model import LogisticRegression
 from explainerdashboard import *
 from explainerdashboard.datasets import *
@@ -33,7 +33,7 @@ mapping_json = {
     "GradientBoostingClassifier": GradientBoostingClassifier,
     "DecisionTreeClassifier": DecisionTreeClassifier,
     "LGBMClassifier": LGBMClassifier,
-    "XGBClassifier": XGBClassifier,
+#     "XGBClassifier": XGBClassifier,
     "RandomForestRegressor": RandomForestRegressor,
     "GradientBoostingRegressor": GradientBoostingRegressor,
     "BaggingRegressor": BaggingRegressor,
@@ -227,7 +227,8 @@ def flask_main(x_train, x_test, y_train, y_test, catCols, model_id, auto):
     if auto == 1:
         print("AUTO ALGO SELECTION")
         scores = []
-        a = [LogisticRegression, RandomForestClassifier, GradientBoostingClassifier, DecisionTreeClassifier, XGBClassifier]
+#         a = [LogisticRegression, RandomForestClassifier, GradientBoostingClassifier, DecisionTreeClassifier, XGBClassifier]
+        a = [LogisticRegression, RandomForestClassifier, GradientBoostingClassifier, DecisionTreeClassifier]
 
         for i in a:
             model = i().fit(x_train, y_train.values.ravel())
@@ -266,8 +267,8 @@ def flask_main(x_train, x_test, y_train, y_test, catCols, model_id, auto):
                 return [GradientBoostingClassifier]
             elif index == 3:
                 return [DecisionTreeClassifier]            
-            elif index == 4:
-                return [XGBClassifier]
+#             elif index == 4:
+#                 return [XGBClassifier]
 
         print(switch(index))
         automodel = switch(index)
