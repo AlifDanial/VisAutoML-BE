@@ -118,6 +118,5 @@ wcwidth==0.2.10
 werkzeug==3.0.1
 wordcloud==1.9.2
 wtforms==3.1.1
-xgboost==2.0.2
 ydata-profiling==4.6.1
 zipp==3.17.0
