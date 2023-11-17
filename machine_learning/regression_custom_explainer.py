@@ -8,7 +8,7 @@ from sklearn.ensemble import RandomForestClassifier, BaggingClassifier, ExtraTre
 
 from sklearn.tree import DecisionTreeClassifier
 from lightgbm import LGBMClassifier
-from xgboost.sklearn import XGBClassifier
+# from xgboost.sklearn import XGBClassifier
 from sklearn.linear_model import LogisticRegression
 from explainerdashboard import *
 from explainerdashboard.datasets import *
@@ -36,7 +36,7 @@ mapping_json = {
     "GradientBoostingClassifier": GradientBoostingClassifier,
     "DecisionTreeClassifier": DecisionTreeClassifier,
     "LGBMClassifier": LGBMClassifier,
-    "XGBClassifier": XGBClassifier,
+#     "XGBClassifier": XGBClassifier,
     "RandomForestRegressor": RandomForestRegressor,
     "GradientBoostingRegressor": GradientBoostingRegressor,
     "BaggingRegressor": BaggingRegressor,
